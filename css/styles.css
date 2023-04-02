@@ -1,0 +1,39 @@
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #EDF2F8;
+}
+.table thead{
+    background-color: #117a8b !important;
+    color: white;
+}
+.btn-primary, .bg-primary{
+    background-color: #117a8b !important;
+    border: 0;
+    border-color: transparent !important;
+}
+.custom-card{
+    border-radius: 5px;
+    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; */
+}
+.custom-bg-grey{
+    background-color: #f4f6f7;
+}
+.text-primary{
+    color: #117a8b !important;
+}
+.car-details-block{
+    width: 50%;
+    height: 80px;
+    border-radius: 5px;
+}
+.btn-outline-info{
+    color:white !important;
+    border-color: white !important;
+}
+.btn-outline-info:hover{
+    color: #117a8b !important;
+    background-color:white !important;
+    border-color: white !important;
+}
