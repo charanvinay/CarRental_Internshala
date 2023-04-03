@@ -1,11 +1,11 @@
 <?php 
     session_start();
-    include 'db_connect.php';
+    include '../../../db_connect.php';
     if(!isset($_SESSION['custo_mail'])){
-      header('location:customerLogin.php');
+      header('location:../Login/customerLogin.php');
       die();
     }
-    include 'navbar.php';
+    include '../../../navbar.php';
 ?>
 
 <html>
@@ -18,8 +18,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script type='text/javascript' src='scripts/addCarValidate.js'></script>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <script type='text/javascript' src='../../../scripts/addCarValidate.js'></script>
+    <link rel="stylesheet" href="../../../css/styles.css"/>
   </head>
   <body>
 

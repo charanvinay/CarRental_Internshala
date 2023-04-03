@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'db_connect.php';
-include 'navbar.php';
+include '../../../db_connect.php';
+include '../../../navbar.php';
 if (!isset($_SESSION['custo_mail'])) {
-  header('location:index.php');
+  header('location:../../../index.php');
   die();
 }
 ?>
@@ -19,7 +19,7 @@ if (!isset($_SESSION['custo_mail'])) {
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../../../css/styles.css" />
 </head>
 
 <body>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['custo_mail'])) {
           and booked_cars.booked_customer='$user'");
             if ($query) {
               if (mysqli_num_rows($query) == 0) {
-                echo '</table><tr><center><h4 class="font">No Cars Are Booked</h4></center></tr>';
+                echo '</table><tr><center><p class="text-secondary">No Cars Are Booked</p></center></tr>';
               } else {
                 while ($fetch = mysqli_fetch_assoc($query)) {
                   echo '

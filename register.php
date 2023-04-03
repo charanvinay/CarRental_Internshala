@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['agency_email']) || isset($_SESSION['custo_mail'])) {
-  header('location:index.php');
+  header('location:./pages/Customer/Dashboard/index.php');
   die();
 }
 ?>
@@ -22,7 +22,7 @@ if (isset($_SESSION['agency_email']) || isset($_SESSION['custo_mail'])) {
 
 <body>
 <div class="m-4">
-    <b><a href="index.php" class="text-primary">< Home </a></b>
+    <b><a href="./pages/Customer/Dashboard/index.php" class="text-primary">< Home </a></b>
   </div>
 
   <div class="d-flex flex-wrap justify-content-around align-items-center">
@@ -76,7 +76,7 @@ if (isset($_SESSION['agency_email']) || isset($_SESSION['custo_mail'])) {
           <small class="text-danger" id='warn'></small>
           <button type="submit" class="btn btn-primary mt-3" style="width:100%">Register</button>
         </form>
-        <p class="text-center">Already a user? <a href="customerLogin.php" class="text-primary">Login</a>
+        <p class="text-center">Already a user? <a href="./pages/Customer/Login/customerLogin.php" class="text-primary">Login</a>
       </div>
     </div>
   </div>

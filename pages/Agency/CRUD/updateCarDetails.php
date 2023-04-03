@@ -1,8 +1,8 @@
 <?php
-include 'db_connect.php';
+include '../../../db_connect.php';
 session_start();
 if(!isset($_SESSION['agency_email'])){
-    header('location:agencyLogin.php');
+    header('location:../Login/agencyLogin.php');
     die();
 }
 $v_id=$_GET['v_id'];
@@ -25,6 +25,6 @@ else{
 
     if($query){
         $_SESSION['msg']='Details Updated Successfully';
-        header('location:agencyDashboard.php');
+        header('location:../Dashboard/agencyDashboard.php');
     }
 }

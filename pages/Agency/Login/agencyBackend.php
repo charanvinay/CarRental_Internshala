@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include '../../../db_connect.php';
 $email=$_POST['email'];
 $pword=$_POST['password'];
 session_start();
@@ -14,7 +14,7 @@ session_start();
         if($email==$fetch['email']){
             if($pword==$fetch['password']){
                 $_SESSION['agency_email']=$email;
-                header('location:agencyDashboard.php');
+                header('location:../Dashboard/agencyDashboard.php');
             }
             else{
                 $_SESSION['warning']="Incorrect Password";

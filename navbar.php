@@ -1,7 +1,7 @@
 <?php
-$agent = "index.php";
+$agent = "../../../pages/Customer/Dashboard/index.php";
 if (isset($_SESSION['agency_email'])) {
-  $agent = "agencyDashboard.php";
+  $agent = "../../../pages/Agency/Dashboard/agencyDashboard.php";
 }
 
 ?>
@@ -23,15 +23,15 @@ if (isset($_SESSION['agency_email'])) {
     if (isset($_SESSION['custo_mail'])) {
       echo '<div class="row mx-2 align-items-center">
                 <span class="text-light mr-3">Welcome ' . $_SESSION['custo_mail'] . '!!!</span>
-                <a href="logout.php" class="btn btn-primary">Logout <i class="fas fa-sign-out" style="color:white"></i></a>
+                <a href="../../../logout.php" class="btn btn-primary">Logout <i class="fas fa-sign-out" style="color:white"></i></a>
               </div>';
     } elseif (isset($_SESSION['agency_email'])) {
       echo '<div class="row mx-2 align-items-center">
                 <span class="text-light mr-3">Welcome ' . $_SESSION['agency_email'] . '!!!</span>
-                <a href="logout.php" class="btn btn-primary">Logout <i class="fas fa-sign-out" style="color:white"></i></a>
+                <a href="../../../logout.php" class="btn btn-primary">Logout <i class="fas fa-sign-out" style="color:white"></i></a>
               </div>';
     } else {
-      echo '<a href="customerLogin.php" class="btn btn-primary">Login <i class="fas fa-sign-in" style="color:white"></i></a>';
+      echo '<a href="../Login/customerLogin.php" class="btn btn-primary">Login <i class="fas fa-sign-in" style="color:white"></i></a>';
     }
     ?>
   </div>

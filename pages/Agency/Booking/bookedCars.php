@@ -1,9 +1,9 @@
 <?php
 session_start();
-include 'db_connect.php';
-include 'navbar.php';
+include '../../../db_connect.php';
+include '../../../navbar.php';
 if (!isset($_SESSION['agency_email'])) {
-  header('location:agencyLogin.php');
+  header('location:../Login/agencyLogin.php');
   die();
 }
 ?>
@@ -19,7 +19,7 @@ if (!isset($_SESSION['agency_email'])) {
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../../../css/styles.css" />
 </head>
 
 <body>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['agency_email'])) {
          where added_cars.added_by='$user' and added_cars.availability='no' and added_cars.car_id=booked_cars.car_id");
             if ($query) {
               if (mysqli_num_rows($query) == 0) {
-                echo '</table><tr><center><h4 class="font">No Cars Are Booked Yet</h4></center></tr>';
+                echo '</table><tr><center><p class="text-secondary">No Cars Are Booked Yet</p></center></tr>';
               } else {
                 while ($fetch = mysqli_fetch_assoc($query)) {
                   echo '

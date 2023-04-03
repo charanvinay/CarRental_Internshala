@@ -2,13 +2,13 @@
     session_start();
     if(isset($_SESSION['custo_mail'])){
         unset($_SESSION['custo_mail']);
-        header('location:customerLogin.php');
+        header('location:pages/Customer/Login/customerLogin.php');
     }
     elseif(isset($_SESSION['agency_email'])){
         unset($_SESSION['agency_email']);
-        header('location:agencyLogin.php');
+        header('location:pages/Agency/Login/agencyLogin.php');
     }
     else{
-        header('location:customerLogin.php');
+        header('location:pages/Customer/Login/customerLogin.php');
     }
 ?>

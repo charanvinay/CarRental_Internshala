@@ -1,8 +1,8 @@
 <?php
-    include 'db_connect.php';
+    include '../../../db_connect.php';
     session_start();
     if(!isset($_SESSION['custo_mail'])){
-        header('location:customerLogin.php');
+        header('location:pages/Customer/Login/customerLogin.php');
         die();
     }
     $v_id=$_GET['v_id'];
@@ -11,14 +11,14 @@
     $user=$_SESSION['custo_mail'];
   
     if(!$_GET['v_id'] || strlen($no_of_days)==0 || strlen($s_date)==0){
-        header('location:index.php');
+        header('location:../Customer/Dashboard/index.php');
     }
     else{
         $check=mysqli_query($db,"select * from added_cars where car_id=$v_id");
         $fetch=mysqli_fetch_assoc($check);
         if($fetch['availability']=='no'){
             $_SESSION['error']='Car not available';
-            header('location:index.php');
+            header('location:../Customer/Dashboard/index.php');
             die();
         }
         else{
@@ -33,7 +33,7 @@
             }
             else{
                 $_SESSION['error']='Something Went Wrong!!, Try Again';
-                header('location:index.php');
+                header('location:../Customer/Dashboard/index.php');
             }
         }
         

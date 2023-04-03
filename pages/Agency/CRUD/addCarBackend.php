@@ -1,8 +1,8 @@
 <?php
-include 'db_connect.php';
+include '../../../db_connect.php';
 session_start();
 if(!isset($_SESSION['agency_email'])){
-    header('location:loginAgency.php');
+    header('location:../Login/agencyLogin.php');
     die();
 }
 $v_model=$_POST['vmodel'];
@@ -21,10 +21,10 @@ else{
   values('$v_id','$v_model','$v_number','$v_capacity','$v_rent','$v_avail','$agent')");
   if($query){
       $_SESSION['msg']='New Car Added Successfully!!';
-      header('location:agencyDashboard.php');
+      header('location:../Dashboard/agencyDashboard.php');
   }
   else{
       $_SESSION['error']='Something Went Wrong!!, Try Again';
-      header('location:agencyDashboard.php');
+      header('location:../Dashboard/agencyDashboard.php');
   }
 }

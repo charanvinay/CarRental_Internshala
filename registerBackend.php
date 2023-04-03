@@ -21,7 +21,7 @@ else{
         $query=mysqli_query($db,"insert into customers(email,password,security_ques,security_ans) values('$email','$password','$secques','$secans')");
         if($query){
             $_SESSION['success']="Registered Successfully!! Please Login";
-            header('location:customerLogin.php');
+            header('location:pages/Customer/Login/customerLogin.php');
         }
       }
     }
@@ -37,7 +37,7 @@ else{
           $query=mysqli_query($db,"insert into agencies(email,password,security_ques,security_ans) values('$email','$password','$secques','$secans')");
             if($query){
                 $_SESSION['success']="Registered Successfully!! Please Login";
-                header('location: agencyLogin.php');
+                header('location:pages/Agency/Login/agencyLogin.php');
             }
             else{
                 echo "error query";

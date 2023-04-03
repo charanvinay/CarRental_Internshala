@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include '../../../db_connect.php';
 $email=$_POST['email'];
 $pword=$_POST['password'];
 session_start();
@@ -15,7 +15,7 @@ session_start();
       if($email==$fetch['email']){
         if($pword==$fetch['password']){
           $_SESSION['custo_mail']=$email;
-          header('location:index.php');
+          header('location:../Dashboard/index.php');
         }
         else{
           $_SESSION['warning']="Incorrect Password";
