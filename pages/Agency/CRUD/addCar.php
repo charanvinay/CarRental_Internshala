@@ -58,7 +58,7 @@ if (!isset($_SESSION['agency_email'])) {
             <small class="text-danger mt-1" id='warn'></small>
             <div class="row mt-4">
               <div class="col">
-                <a href="agencyDashboard.php" class="btn btn-outline bg-light text-primary border" style="width:100%">Cancel</a>
+                <a href="../Dashboard/agencyDashboard.php" class="btn btn-outline bg-light text-primary border" style="width:100%">Cancel</a>
               </div>
               <div class="col">
                 <button type="submit" class="btn btn-primary" style="width:100%">Add</button>
