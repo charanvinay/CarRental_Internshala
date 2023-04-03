@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 02, 2023 at 01:28 PM
+-- Generation Time: Apr 03, 2023 at 02:34 AM
 -- Server version: 10.5.16-MariaDB
 -- PHP Version: 7.3.32
 
@@ -46,10 +46,13 @@ INSERT INTO `added_cars` (`car_id`, `car_model`, `car_number`, `capacity`, `rent
 ('6428ff981fed1', 'Toyota Fortuner', '78541', 20, 2000, 'no', 'agency1@gmail.com'),
 ('6429790f2e366', 'Skoda Kushaq', '4523', 5, 2000, 'no', 'agency1@gmail.com'),
 ('6429792788c39', 'BMW X3', '7845', 2, 4000, 'yes', 'agency1@gmail.com'),
-('64297ceb9b007', 'Mahindra XUV700', '784512', 5, 5000, 'yes', 'agency2@gmail.com'),
+('64297ceb9b007', 'Mahindra XUV700', '784512', 5, 5000, 'no', 'agency2@gmail.com'),
 ('64297d10b3d6e', 'Tata Harrier', '124332', 8, 8000, 'no', 'agency2@gmail.com'),
-('64297d235a8b8', 'Maruti Baleno', '7845', 2, 2000, 'no', 'agency2@gmail.com'),
-('64297d40b76b4', 'Maruti Alto 800', '1245', 6, 6500, 'yes', 'agency2@gmail.com');
+('64297d235a8b8', 'Maruti Baleno', '7845', 20, 20000, 'no', 'agency2@gmail.com'),
+('64297d40b76b4', 'Maruti Alto 800', '1245', 6, 6500, 'yes', 'agency2@gmail.com'),
+('642a3643aef3e', 'Land Rover Defender', '4578', 6, 10000, 'no', 'agency3@gmail.com'),
+('642a376077f47', 'Mercedes-Benz GLA', '12345', 3, 3000, 'yes', 'agency3@gmail.com'),
+('642a377c94a2d', 'Jeep Wrangler', '2004', 6, 3000, 'yes', 'agency3@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -70,8 +73,9 @@ CREATE TABLE `agencies` (
 --
 
 INSERT INTO `agencies` (`sno`, `email`, `password`, `security_ques`, `security_ans`) VALUES
-(8, 'agency1@gmail.com', '12345678', 'Your Pet name', 'snoopy'),
-(10, 'agency2@gmail.com', '123456', 'Your Nickname', 'agency2');
+(8, 'agency1@gmail.com', '123456', 'Your Pet name', 'snoopy'),
+(10, 'agency2@gmail.com', '123456', 'Your Nickname', 'agency2'),
+(11, 'agency3@gmail.com', 'agency3', 'Your Pet name', 'ku');
 
 -- --------------------------------------------------------
 
@@ -94,7 +98,9 @@ INSERT INTO `booked_cars` (`car_id`, `start_date`, `no_of_days`, `booked_custome
 ('6429790f2e366', '2023-04-02', 5, 'test@gmail.com'),
 ('6428ff981fed1', '2023-04-02', 2, 'test@gmail.com'),
 ('64297d235a8b8', '2023-04-02', 4, 'test@gmail.com'),
-('64297d10b3d6e', '2023-04-02', 2, 'test@gmail.com');
+('64297d10b3d6e', '2023-04-02', 2, 'test@gmail.com'),
+('64297ceb9b007', '2023-04-03', 11, 'test@gmail.com'),
+('642a3643aef3e', '2023-04-03', 3, 'customer1@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -115,7 +121,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`sno`, `email`, `password`, `security_ques`, `security_ans`) VALUES
-(6, 'test@gmail.com', '123456', 'Your Nickname', 'test');
+(6, 'test@gmail.com', '123456', 'Your Nickname', 'test'),
+(8, 'customer1@gmail.com', 'customer1', 'Your Favourite place', 'Kerala');
 
 --
 -- Indexes for dumped tables
@@ -141,13 +148,13 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `agencies`
 --
 ALTER TABLE `agencies`
-  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
