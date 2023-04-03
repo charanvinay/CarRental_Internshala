@@ -27,9 +27,6 @@ include '../../../db_connect.php';
         <?php if (isset($_SESSION['custo_mail'])) {
           echo '<a href="../Booking/myBookings.php" class="btn btn-primary">My Bookings</a>';
         } ?>
-        <?php if (isset($_SESSION['agency_username'])) {
-          echo '<a href="../../Agency/Booking/bookedCars.php" class="btn btn-primary ml-2">View Added Cars</a>';
-        } ?>
       </div>
     </div>
   </div>
